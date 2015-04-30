@@ -1,39 +1,229 @@
-body{
-	    	margin-top: 100px;
-		font-family: 'Trebuchet MS', serif;
-		line-height: 1.6
-	}
-	.container{
-		width: 800px;
-		margin: 0 auto;
-	}
+body {
+  background-repeat: repeat-x|repeat-y;
+  background-image: url(../imagenes/Dark-Grey.jpg);
+  background-position: left top;
+  background-attachment: fixed;
+}
+
+#logo{
+  border-radius:12px;
+  margin:-5px -50px auto;
+  width: 900px;
+  color: #fff;
+}
+
+#box{
+  background:rgba(0,0,0,0.5);
+  border-radius:12px;
+  margin:auto auto auto;
+  width: 900px;
+  color: #fff;
+}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu {
+  width: 180px;
+  z-index: 10;
+}
+#cssmenu ul {
+  border: 1px solid #606060;
+  border-radius: 5px;
+  background: #606060;
+  background: -moz-linear-gradient(bottom, #a8a8a8, #606060);
+  background: -webkit-linear-gradient(bottom, #a8a8a8, #606060);
+  background: -o-linear-gradient(bottom, #a8a8a8, #606060);
+  background: -ms-linear-gradient(bottom, #a8a8a8, #606060);
+  background: linear-gradient(to top, #a8a8a8, #606060);
+}
+#cssmenu ul li {
+  display: block;
+  border-bottom: 1px solid #606060;
+}
+#cssmenu ul li.active {
+  border-bottom: 0;
+}
+#cssmenu ul li:last-child {
+  border-bottom: 0;
+}
+#cssmenu ul li a {
+  display: block;
+  padding: 14px 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #444444;
+}
+#cssmenu ul li.active {
+  left: -8px;
+  width: 194px;
+  padding: 2px;
+  background: #ce4c4a;
+  background: -moz-linear-gradient(bottom, #4372AA, #26466D);
+  background: -webkit-linear-gradient(bottom, #4372AA, #26466D);
+  background: -o-linear-gradient(bottom, #4372AA, #26466D);
+  background: -ms-linear-gradient(bottom, #4372AA, #26466D);
+  background: linear-gradient(to top, #4372AA, #26466D);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+#cssmenu ul li.active > a {
+  padding: 12px 12px 12px 16px;
+  border-left: 1px dashed #5CACEE;
+  border-top: 1px dashed #5CACEE;
+  border-bottom: 1px dashed #5CACEE;
+  color: #ffffff;
+  text-shadow: 0 1px 1px #8c2726;
+}
+#cssmenu ul li.active:after {
+  position: absolute;
+  right: -16px;
+  top: 7px;
+  width: 31.526911934581186px;
+  height: 31.526911934581186px;
+  background: #ce4c4a;
+  background: -moz-linear-gradient(-45deg, #4372AA, #26466D);
+  background: -webkit-linear-gradient(-45deg, #4372AA, #26466D);
+  background: -o-linear-gradient(-45deg, #4372AA, #26466D);
+  background: -ms-linear-gradient(-45deg, #4372AA, #26466D);
+  background: linear-gradient(-45deg, #4372AA, #26466D);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+}
+#cssmenu ul li.active:before {
+  position: absolute;
+  right: -12px;
+  top: 9px;
+  z-index: 10;
+  width: 28.526911934581186px;
+  height: 28.526911934581186px;
+  border-right: 1px dashed #5CACEE;
+  border-top: 1px dashed #5CACEE;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+}
+#cssmenu ul li.active a:after {
+  position: absolute;
+  bottom: -7px;
+  left: -11px;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid #982b29;
+  content: "";
+}
 
 
 
-	ul.tabs{
-		margin: 0px;
-		padding: 0px;
-		list-style: none;
-	}
-	ul.tabs li{
-		background: none;
-		color: #222;
-		display: inline-block;
-		padding: 10px 15px;
-		cursor: pointer;
-	}
+img {
+  border: 0;
+}
+#dock-container {
+  text-align: center;
+  margin: auto 70px auto;
+  width: 100%;
+}
+#dock {
+  position: relative;
+  display: inline-block;
+  -webkit-perspective: 400;
+  -moz-perspective: 400;
+}
+#dock .base {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  z-index: -10;
+  background-color: #888;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#ccc));
+  background-image: -webkit-linear-gradient(top, #333, #999);
+  background-image: -moz-linear-gradient(top, #333, #999); /* Gradient works on FF 3.6+ */
+  opacity: .1;
+  border-bottom: 2px #aaa solid;
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transform: rotateX(55deg); /* 3d - works on webkit only */
+  -moz-transform-origin: 50% 100%;
+  -moz-transform: rotateX(55deg); /* not supported on current 3.7 */
+  -o-transform-origin: 50% 100%;
+  -o-transform: rotateX(55deg); /* not supported on current 10.6 */
+}
+#dock ul {
+  font-size: 14px;
+  padding: 0 30px;
+  margin: 0;
+}
+#dock li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+#dock li span {
+  display: none;
+  position: absolute;
+  bottom: 140px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,.75);
+  padding: 4px 0;
+  border-radius: 12px; /* webkit nightly */
+  -webkit-border-radius: 12px; /* for safari */
+  -moz-border-radius: 12px;
+}
+#dock li:hover span {
+  display: block;
+}
+#dock li img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+  -webkit-box-reflect: below 2px
+      -webkit-gradient(linear, left top, left bottom, from(transparent),
+      color-stop(0.7, transparent), to(rgba(255,255,255,.5)));
+  -webkit-box-reflect: below 2px -webkit-linear-gradient(top, transparent, rgba(255,255,255,.3));
+  -webkit-transition: all 0.3s;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transition: all 0.4s;
+  -moz-transform-origin: 50% 100%;
+  -o-transition: all 0.3s;
+  -o-transform-origin: 50% 100%;
+}
+#dock li:hover img {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -o-transform: scale(2);
+  margin: 0 2em 10px;
+}
 
-	ul.tabs li.current{
-		background: #ededed;
-		color: #222;
-	}
-
-	.tab-content{
-		display: none;
-		background: #ededed;
-		padding: 15px;
-	}
-
-	.tab-content.current{
-		display: inherit;
-    }
+/* one element after and element before (with JS)*/
+#dock li:hover + li img,
+#dock li.prev img {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  margin: 0 1.4em 10px;
+}
